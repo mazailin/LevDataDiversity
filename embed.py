@@ -34,7 +34,7 @@ def truncate_texts(texts, tokenizer, max_length=512):
 
 def compute_embed(model, tokenizer, client, text_list, max_length, fo):
     """Compute embeddings for a batch of texts."""
-    truncated_prompts = truncate_texts(texts, tokenizer, max_length)
+    truncated_prompts = truncate_texts(text_list, tokenizer, max_length)
     outputs = client.embeddings.create(model=model, input=truncated_prompts)
     for e in outputs.data:
         fo.write(struct.pack("f" * len(e.embedding), *e.embedding))
