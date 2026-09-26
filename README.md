@@ -16,7 +16,7 @@ We propose **Leverage Score Sampling (Lev)**, a scalable scheme that employs lev
 - Lev shows superior computational efficiency, enabling scalable diversified sampling. It improves dataset diversity (measured by Vendi score) by 9.2\% while achieving a **72$\times$ runtime speedup** compared to the strong *diversification baseline DiSF*. 
 - Moreover, it outperforms existing diversity-based selection methods on downstream performance of the pretrained models. On CommonCrawl (CC) web data subset selection, it improves average accuracy across seven downstream tasks by up to 1.31% over existing baselines. 
 - Crucially, Lev requires no curated quality references, making it uniquely effective for domains where defining quality is inherently ambiguous, e.g., code data: on StarCoderData, it reduces model's bits-per-byte by 3.08% over DiSF. 
-- Using 8 RTX 5090 GPUs that process 8 files in parallel, **selecting 40%** data from **a single CommonCrawl dump (~200B token)** with a step size of 2 requires only about 1.67 hours compared to 108.48 hours of DiSF, confirming a 72$\times$ speedup. With a step size of 8, **Lev consumes only about 35 min** compared to 26.88h of DiSF.
+- Using 8 RTX 5090 GPUs that process 8 files in parallel, **selecting 40%** data from **a single CommonCrawl dump (~200B token)** with a step size of 1 requires only about 3.03 hours compared to 217.28 hours of DiSF, confirming a 72$\times$ speedup. With a step size of 8, **Lev consumes only about 35 min** compared to 26.88h of DiSF.
 
 <img src="figures/mainfigure.png" width="80%">
 
