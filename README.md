@@ -10,7 +10,7 @@ Quality filtering is the dominant paradigm for data selection in LLM pretraining
 ### Method
 We propose **Leverage Score Sampling (Lev)**, a scalable scheme that employs leverage scores as a principled metric for diversity improvement. Grounded in the geometric insight that dataset diversity corresponds to the determinantal volume of the representation subspace spanned by embedded samples, we prove a theorem showing that the leverage score of a candidate exactly quantifies its contribution to expanding this volume upon inclusion in the selected subset (Theorem 3.1). Building on this result, Lev iteratively selects samples with the highest leverage scores to directly maximize geometric diversity. Unlike DiSF, which requires costly covariance matrix recomputation for each candidate to evaluate its marginal diversity contribution, Lev evaluates all candidates via quadratic expressions with a single shared Gram matrix, achieving superior computational efficiency and enabling scalable applications.
 
-<img src="figures/geointuition7.png" width="65%">
+<img src="figures/geointuition8.png" width="65%">
 
 ### Main Results
 - Lev shows superior computational efficiency, enabling scalable diversified sampling. It improves dataset diversity (measured by Vendi score) by 9.2\% while achieving a **72$\times$ runtime speedup** compared to the strong *diversification baseline DiSF*. 
